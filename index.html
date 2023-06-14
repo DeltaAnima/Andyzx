@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Historia.id - Landing Page</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <h1>Historia.id</h1>
+    <p>Manajemen Event dan lain-lain serta kerja sama kami menerima dengan sepenuh hati.</p>
+  </header>
+
+  <div class="container">
+    <div class="main-content">
+      <h2>Welcome to Historia.id</h2>
+      <p>Untuk Kerjasama dll klik link dibawah</p>
+      <a class="cta-button" href="https://instagram.com/histora.id?igshid=NTc4MTIwNjQ2YQ==">Klik Disini</a>
+    </div>
+    <div class="features">
+      <div class="feature">
+        <img src="https://sfile.mobi/image/2/icon1.png&w=150&h=150&q=50" alt="Feature 1">
+        <h3>Info Event</h3>
+        <p>Info untuk acara Event ada disini</p>
+        <a class="feature-button" href="#">Lihat Detail</a>
+      </div>
+      <div class="feature">
+        <img src="https://sfile.mobi/image/661064/20230614%20230136.png&w=150&h=150&q=50" alt="Feature 2">
+        <h3>Tiket Presale</h3>
+        <p>info pembelian tiket untuk Event yang diadakan.</p>
+        <a class="feature-button" href="#">Beli Tiket</a>
+      </div>
+      <div class="feature">
+        <img src="https://sfile.mobi/image/661064/Project%20Claire%2020230614%20230733.png&w=150&h=150&q=50" alt="Feature 3">
+        <h3>Project Claire</h3>
+        <p>Ayo join Komunitas kami untuk menambah teman dan mendapatkan update seputar Event</p>
+        <a class="feature-button" href="#">Gabung Sekarang</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Ambil elemen-elemen menu
+    var menuItems = document.querySelectorAll('.menu li a');
+
+    // Tambahkan event listener untuk setiap item menu
+    menuItems.forEach(function(item) {
+      item.addEventListener('click', function(e) {
+        e.preventDefault();
+        var targetId = item.getAttribute('href').substring(1);
+        var targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          // Scroll ke elemen target
+          window.scrollTo({
+            top: targetElement.offsetTop,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
